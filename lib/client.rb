@@ -6,7 +6,6 @@ class Client
       @stylist_id = attributes.fetch(:stylist_id)
     end
 
-
     define_singleton_method(:all) do
       returned_clients = DB.exec("SELECT * FROM clients;")
       clients = []
@@ -16,5 +15,13 @@ class Client
         clients.push(Client.new({:description => description, :stylist_id => stylist_id}))
       end
       clients
+    end
+
+    define_method(:save) do
+      DB.exec("INSERT INTO clients (description, stylist_id) VALUES ('#{@description}', #{@stylist_id});")
+    end
+
+    def delete
+      DB.exec("DELETE FROM clients WHERE stylist_id = stylist_id");
     end
 end
