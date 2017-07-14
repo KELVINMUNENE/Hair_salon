@@ -1,0 +1,25 @@
+<h1>Your Current stylists</h1>
+
+<hr>
+
+  <% if @stylists.any?() %>
+    <h3>Here are your stylist:</h3>
+
+    <ul>
+      <% @stylists.each() do |stylist| %>
+        <li><a href="/stylists/<%= stylist.id()%>"><%= stylist.name() %></a> </li>
+        <p><a href="/stylists/<%= stylist.id() %>/edit"><button class="button btn"> Edit <%= stylist.name() %> stylist</button></a></p>
+      <% end %>
+    </ul>
+
+  <% else %>
+
+      <p>Please input a stylist</p>
+
+  <% end %>
+
+  <hr>
+
+  <a href="/"><button class="button btn">Return Home</button></a>
+  <a href="/stylists/new"><button class="button btn">Add New stylist without client</button></a>
+  <a href="/add"><button class="button btn">Add a client to existing stylist</button></a>
