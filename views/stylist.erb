@@ -1,5 +1,5 @@
 <h3>Clients</h3>
-  <% if @stylist.tasks().any?() %>
+  <% if @stylist.clients().any?() %>
     <h3>Here are all the clients in this list with their stylists:</h3>  <ol>
       <% @stylist.clients().each() do |client| %>
         <li><%= client.description() %></li>
