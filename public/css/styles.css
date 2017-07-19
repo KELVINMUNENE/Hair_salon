@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Aclonica|Frijole');
+
+
+h1{
+  font-family: 'Frijole', cursive;
+}
+body{
+  font-family: 'Aclonica', cursive;
+  text-align: center;
+  background-image: url('https://images.pexels.com/photos/9634/pink-hair-selfie-bun.jpg?w=940&h=650&auto=compress&cs=tinysrgb');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+html,{
+  width: 100%;
+  height: 100%;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background: url('http://unsplash.it/1200x800') center center no-repeat;
+  background-size: cover;
+  
+  &:before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+	opacity: .6; 
+  }
+}

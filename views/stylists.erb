@@ -5,12 +5,12 @@
   <% if @stylists.any?() %>
     <h3>Here are your stylist:</h3>
 
-    <ul>
+    <ol>
       <% @stylists.each() do |stylist| %>
         <li><a href="/stylists/<%= stylist.id()%>"><%= stylist.name() %></a> </li>
-        <p><a href="/stylists/<%= stylist.id() %>/edit"><button class="button btn"> Edit <%= stylist.name() %> stylist</button></a></p>
+        <p><a href="/stylists/<%= stylist.id() %>/edit"><button class="button btn"> Edit stylist</button></a></p>
       <% end %>
-    </ul>
+    </ol>
 
   <% else %>
 
